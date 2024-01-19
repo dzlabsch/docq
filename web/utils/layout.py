@@ -250,13 +250,11 @@ def render_page_title_and_favicon(page_display_title: Optional[str] = None) -> N
         page_display_title: Optional[str] - override the title rendered on the page and browser tab.
     """
     favicon_path = "web/favicon.ico"
-    browser_title_prefix = "Docq.AI"
+    browser_title_prefix = "SecureGPT.ch"
     about_menu_content = f"**{docq.__summary__}** \
             \n\nVersion: **{docq.__version__}** \
             \nWebsite: {docq.__homepage_url__}  \
             \nDocs: {docq.__documentation_url__} \
-            \nGitHub (give us a star): {docq.__repository_url__} \
-            \nTwitter: https://twitter.com/docqai"
 
     pages = get_pages("")
     ctx = get_script_run_ctx()
@@ -1348,7 +1346,7 @@ def init_with_pretty_error_ui() -> None:
         setup.init()
         log.debug("Tornado settings: %s ", st_app.get_singleton_instance().settings)
     except Exception as e:
-        st.error("Something went wrong starting Docq.")
+        st.error("Something went wrong starting SecureGPT.")
         log.fatal("Error: setup.init() failed with: %s", e, exc_info=True)
         st.stop()
 
@@ -1393,7 +1391,7 @@ def _validate_password(password: str, generator: DeltaGenerator) -> bool:
         return False
     elif len(password) < 8:
         generator.error(
-            "Password must be at least 8 characters long and contain atleast 1 of the following: 1 uppercase, 1 lowercase, 1 number and 1 special character."
+            "Password must be at least 8 characters long and contain at least 1 of the following: 1 uppercase, 1 lowercase, 1 number, and 1 special character."
         )
         return False
     else:
@@ -1456,7 +1454,7 @@ def signup_ui() -> None:
 
         _disable_sidebar()
         handle_logout()
-        st.title("Docq Signup")
+        st.title("SecureGPT Signup")
         st.markdown('Already have an account? Login <a href="/" target="_self">here</a>.', unsafe_allow_html=True)
 
         if not handle_check_mailer_ready():
@@ -1505,8 +1503,8 @@ def verify_email_ui() -> None:
     _disable_sidebar()
     handle_logout()
     if handle_verify_email():
-        st.success("Email address verified and account activated. Thank you for signing up for Docq.")
-        st.markdown('You can now Access docq from <a href="/" target="_self">here</a>.', unsafe_allow_html=True)
+        st.success("Email address verified and account activated. Thank you for signing up for SecureGPT.")
+        st.markdown('You can now Access SecureGPT from <a href="/" target="_self">here</a>.', unsafe_allow_html=True)
     else:
         st.error("Email verification failed!")
         st.info("Please try again or contact your administrator.")
