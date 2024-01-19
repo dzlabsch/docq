@@ -21,11 +21,12 @@ with tracer().start_as_current_span("home_page", attributes=baggage_as_attribute
     production_layout()
 
     with st.sidebar:
+        st.image("https://github.com/docqai/docq/blob/main/docs/assets/logo.jpg?raw=true", width=40)
         org_selection_ui()
 
     show_pages(
         [
-            Page("web/index.py", "Home", '<img src="https://github.com/docqai/docq/blob/main/docs/assets/logo.jpg?raw=true" alt="Logo" style="width:40px;height:40px;">'),
+            Page("web/index.py", "Home"),
             Page("web/signup.py", "signup"),
             Page("web/verify.py", "verify"),
             Page("web/personal_chat.py", "Chat"),
