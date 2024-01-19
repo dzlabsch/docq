@@ -21,7 +21,7 @@ with tracer().start_as_current_span("home_page", attributes=baggage_as_attribute
     production_layout()
 
     with st.sidebar:
-        st.image("https://github.com/dzlabsch/docq/blob/main/docs/assets/logo.jpg?raw=true", width=40)
+        st.image("https://github.com/dzlabsch/docq/blob/main/docs/assets/logo.jpg?raw=true", width=140)
         org_selection_ui()
 
     show_pages(
