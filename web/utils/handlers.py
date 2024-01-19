@@ -853,7 +853,7 @@ def prepare_for_chat(feature: domain.FeatureKey) -> None:
         query_chat_history(feature)
         if not get_chat_session(feature.type_, SessionKeyNameForChat.HISTORY):
             set_chat_session(
-                [("0", "Hi there! This is Docq, ask me anything.", False, datetime.now(), thread_id)],
+                [("0", "Welcome to SecureGPT, ask me anything.", False, datetime.now(), thread_id)],
                 feature.type_,
                 SessionKeyNameForChat.HISTORY,
             )
@@ -865,7 +865,7 @@ def handle_create_new_chat(feature: domain.FeatureKey) -> None:
     set_chat_session(thread_id, feature.type_, SessionKeyNameForChat.THREAD)
     set_chat_session(datetime.now(), feature.type_, SessionKeyNameForChat.CUTOFF)
     set_chat_session(
-        [("0", "Hi there! This is Docq, ask me anything.", False, datetime.now(), thread_id)],
+        [("0", "Welcome to SecureGPT, ask me anything.", False, datetime.now(), thread_id)],
         feature.type_,
         SessionKeyNameForChat.HISTORY,
     )
