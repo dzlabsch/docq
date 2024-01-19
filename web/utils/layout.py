@@ -254,7 +254,7 @@ def render_page_title_and_favicon(page_display_title: Optional[str] = None) -> N
     about_menu_content = f"**{docq.__summary__}** \
             \n\nVersion: **{docq.__version__}** \
             \nWebsite: {docq.__homepage_url__}  \
-            \nDocs: {docq.__documentation_url__}
+            \nDocs: {docq.__documentation_url__}"
 
     pages = get_pages("")
     ctx = get_script_run_ctx()
