@@ -637,7 +637,7 @@ def _chat_message(message_: str, is_user: bool) -> None:
             st.write(message_)
     else:
         with st.chat_message(
-            "assistant", avatar="https://github.com/docqai/docq/blob/main/docs/assets/logo.jpg?raw=true"
+            "assistant", avatar="https://github.com/dzlabsch/docq/blob/main/docs/assets/logo.jpg?raw=true"
         ):
             st.markdown(message_, unsafe_allow_html=True)
 
