@@ -111,10 +111,13 @@ def _generate_file_markdown(file_sources: dict) -> str:
     """Generate markdown for listing file sources."""
     markdown_list = []
     for uri, sources in file_sources.items():
-        name, pages = sources[0], list(set(sources[1:]))
+        name, pages = sources[0], sources[1:]
+        # Filter out None values and convert all elements to strings
+        pages = [str(page) for page in pages if page is not None]
         download_link = _get_download_link(name, uri)
         markdown_list.append(f"> *File:* [{name}]({download_link})<br> *Pages:* {', '.join(pages)}")
     return "\n\n".join(markdown_list) + "\n\n" if markdown_list else ""
+
 
 
 def _generate_web_markdown(web_sources: dict) -> str:
