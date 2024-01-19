@@ -1,11 +1,11 @@
-site_name: Docq - Private & Secure ChatGPT AI Knowledge Insight
-site_url: https://docqai.github.io/docq
-site_description: Docq offers self-hosted, private and secure ChatGPT on your private data with minimal onboarding and operational effort.
+site_name: SecureGPT - Private & Secure AI Datarooms
+site_url: https://securegpt.ch
+site_description: SecureGTP offers swiss-hosted, private and secure ChatGPT on your private data with minimal onboarding and operational effort.
 site_author: Docq Contributors
 copyright: Copyright &copy; 2023 Docq Contributors
 site_dir: html
-repo_name: docqai/docq
-repo_url: https://github.com/docqai/docq
+repo_name: dzlabsch/docq
+repo_url: https://github.com/dzlabsch/docq
 
 plugins:
   - search
@@ -33,7 +33,7 @@ markdown_extensions:
 extra:
   analytics:
     provider: google
-    property: G-SML7XH761K
+    property: G-
 
 extra_css:
   - stylesheets/extra.css
