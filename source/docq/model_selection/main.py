@@ -88,7 +88,7 @@ LLM_MODEL_COLLECTIONS = {
         key="openai_latest",
         model_usage_settings={
             ModelCapability.CHAT: ModelUsageSettings(
-                model_vendor=ModelVendor.OPENAI, model_name="gpt-3.5-turbo", model_capability=ModelCapability.CHAT
+                model_vendor=ModelVendor.OPENAI, model_name="gpt-4-32k", model_capability=ModelCapability.CHAT
             ),
             ModelCapability.EMBEDDING: ModelUsageSettings(
                 model_vendor=ModelVendor.OPENAI,
